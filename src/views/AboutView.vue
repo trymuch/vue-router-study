@@ -1,15 +1,24 @@
+<script setup>
+import Header from "@/components/Header.vue";
+</script>
 <template>
+  <Header />
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>这是about页面</h1>
+    <div>当前路由对象：{{ $route }}</div>
+    <div>当前的路由实例的路径：{{ $route.path }}</div>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+<style lang="less" scoped>
+.about {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+    font-size: 36px;
   }
 }
 </style>

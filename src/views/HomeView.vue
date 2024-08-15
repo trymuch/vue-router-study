@@ -1,9 +1,23 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Header from "@/components/Header.vue";
 </script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <Header />
+  <div class="home">
+    <h1>这是home页面</h1>
+    <div>当前路由对象：{{ $route }}</div>
+    <div>当前的路由实例的路径：{{ $route.path }}</div>
+  </div>
 </template>
+<style lang="less" scoped>
+.home {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+    font-size: 36px;
+  }
+}
+</style>
